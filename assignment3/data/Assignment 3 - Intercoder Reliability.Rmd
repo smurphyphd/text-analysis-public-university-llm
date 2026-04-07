@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Assignment 3 - Intercoder Reliability
+## Assignment 3 - Intercoder Reliability - Earlier Version
 
 # Load Data
 
@@ -67,3 +67,70 @@ kappa2(df[, c("memory_pred", "memory_feedback_pred")])
 
 ```
 
+title: "Assignment 3 - ICR"
+author: "Sara Murphy"
+date: "2026-04-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Assignment 3 - Intercoder Reliability - Recent Version
+
+# Load Data
+
+```{r}
+library(readxl)
+library(here)
+library(irr)
+
+df <- read_excel(here("assignment3", "data", "llm_all_predictions-5.xlsx"))
+
+
+```
+
+
+# Use Fleiss' Kappa
+Average Kappa is 0.588 which is believed to be a "moderate" level of correlation across the 4 approaches (human, zero shot, memory and memory feedback). P value is approximately 0, meaning the correlations are not due to random chance. 
+
+```{r }
+library(irr)
+
+# Select only coder columns
+ratings <- df[, c("class", "zero_shot_pred", "memory_pred", "memory_feedback_pred")]
+
+# Fleiss' Kappa
+kappa2 <- kappam.fleiss(ratings)
+
+print(kappa2)
+```
+
+## Comparing Human to Each LLM Model
+
+Largest Kappa is comparing human to zero shot (0.44)
+Next highest Kappa is comparing human to memory feedback (0.428)
+Lowest Kappa is copmaring human to memory (0.409)
+
+This suggests that LLMS are internally consistent but are weaker when compared directly against the human coding. 
+
+```{r}
+kappa2(df[, c("class", "zero_shot_pred")])
+kappa2(df[, c("class", "memory_pred")])
+kappa2(df[, c("class", "memory_feedback_pred")])
+```
+# Comparing LLMS on reliability
+
+As shown below, there is moderately strong reliability when looking at pairwise comparisons of the LLM models.
+
+The highest Kappa is between memory and memory feedback (0.821).
+The next highest Kappa is between zero shot and memory (0.744).
+The lowest Kappa is between zero shot and memory feedback (0.72).
+
+```{r}
+kappa2(df[, c("zero_shot_pred", "memory_pred")])
+kappa2(df[, c("zero_shot_pred", "memory_feedback_pred")])
+kappa2(df[, c("memory_pred", "memory_feedback_pred")])
+
+```
