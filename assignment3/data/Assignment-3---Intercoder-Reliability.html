@@ -357,8 +357,8 @@ display: none;
 </div>
 
 
-<div id="assignment-3---intercoder-reliability" class="section level2">
-<h2>Assignment 3 - Intercoder Reliability</h2>
+<div id="assignment-3---intercoder-reliability---earlier-version" class="section level2">
+<h2>Assignment 3 - Intercoder Reliability - Earlier Version</h2>
 </div>
 <div id="load-data" class="section level1">
 <h1>Load Data</h1>
@@ -461,6 +461,109 @@ Kappa is between zero shot and memory feedback (0.72).</p>
 ##     Kappa = 0.821 
 ## 
 ##         z = 11.7 
+##   p-value = 0</code></pre>
+<div id="assignment-3---intercoder-reliability---recent-version" class="section level2">
+<h2>Assignment 3 - Intercoder Reliability - Recent Version</h2>
+</div>
+</div>
+<div id="load-data-1" class="section level1">
+<h1>Load Data</h1>
+<pre class="r"><code>library(readxl)
+library(here)
+library(irr)
+
+df &lt;- read_excel(here(&quot;assignment3&quot;, &quot;data&quot;, &quot;llm_all_predictions-5.xlsx&quot;))</code></pre>
+</div>
+<div id="use-fleiss-kappa-1" class="section level1">
+<h1>Use Fleiss’ Kappa</h1>
+<p>Average Kappa is 0.457 which is believed to be a “moderate” level of
+correlation across the 4 approaches (human, zero shot, memory and memory
+feedback). P value is approximately 0, meaning the correlations are not
+due to random chance.</p>
+<pre class="r"><code>library(irr)
+
+# Select only coder columns
+ratings &lt;- df[, c(&quot;class&quot;, &quot;zero_shot_pred&quot;, &quot;memory_pred&quot;, &quot;memory_feedback_pred&quot;)]
+
+# Fleiss&#39; Kappa
+kappa2 &lt;- kappam.fleiss(ratings)
+
+print(kappa2)</code></pre>
+<pre><code>##  Fleiss&#39; Kappa for m Raters
+## 
+##  Subjects = 401 
+##    Raters = 4 
+##     Kappa = 0.457 
+## 
+##         z = 27.3 
+##   p-value = 0</code></pre>
+<div id="comparing-human-to-each-llm-model-1" class="section level2">
+<h2>Comparing Human to Each LLM Model</h2>
+<p>Largest Kappa is comparing human to memory feedback (0.62) Next
+highest Kappa is comparing human to memory (0.404) Lowest Kappa is
+copmaring human to zero shot (0.349)</p>
+<pre class="r"><code>kappa2(df[, c(&quot;class&quot;, &quot;zero_shot_pred&quot;)])</code></pre>
+<pre><code>##  Cohen&#39;s Kappa for 2 Raters (Weights: unweighted)
+## 
+##  Subjects = 401 
+##    Raters = 2 
+##     Kappa = 0.349 
+## 
+##         z = 10.9 
+##   p-value = 0</code></pre>
+<pre class="r"><code>kappa2(df[, c(&quot;class&quot;, &quot;memory_pred&quot;)])</code></pre>
+<pre><code>##  Cohen&#39;s Kappa for 2 Raters (Weights: unweighted)
+## 
+##  Subjects = 401 
+##    Raters = 2 
+##     Kappa = 0.404 
+## 
+##         z = 8.43 
+##   p-value = 0</code></pre>
+<pre class="r"><code>kappa2(df[, c(&quot;class&quot;, &quot;memory_feedback_pred&quot;)])</code></pre>
+<pre><code>##  Cohen&#39;s Kappa for 2 Raters (Weights: unweighted)
+## 
+##  Subjects = 401 
+##    Raters = 2 
+##     Kappa = 0.62 
+## 
+##         z = 12.8 
+##   p-value = 0</code></pre>
+</div>
+</div>
+<div id="comparing-llms-on-reliability-1" class="section level1">
+<h1>Comparing LLMS on reliability</h1>
+<p>As shown below, there is moderately strong reliability when looking
+at pairwise comparisons of the LLM models.</p>
+<p>The highest Kappa is between memory and memory feedback (0.653). The
+next highest Kappa is between zero shot and memory (0.406). The lowest
+Kappa is between zero shot and memory feedback (0.369).</p>
+<pre class="r"><code>kappa2(df[, c(&quot;zero_shot_pred&quot;, &quot;memory_pred&quot;)])</code></pre>
+<pre><code>##  Cohen&#39;s Kappa for 2 Raters (Weights: unweighted)
+## 
+##  Subjects = 401 
+##    Raters = 2 
+##     Kappa = 0.406 
+## 
+##         z = 12.5 
+##   p-value = 0</code></pre>
+<pre class="r"><code>kappa2(df[, c(&quot;zero_shot_pred&quot;, &quot;memory_feedback_pred&quot;)])</code></pre>
+<pre><code>##  Cohen&#39;s Kappa for 2 Raters (Weights: unweighted)
+## 
+##  Subjects = 401 
+##    Raters = 2 
+##     Kappa = 0.369 
+## 
+##         z = 11.4 
+##   p-value = 0</code></pre>
+<pre class="r"><code>kappa2(df[, c(&quot;memory_pred&quot;, &quot;memory_feedback_pred&quot;)])</code></pre>
+<pre><code>##  Cohen&#39;s Kappa for 2 Raters (Weights: unweighted)
+## 
+##  Subjects = 401 
+##    Raters = 2 
+##     Kappa = 0.653 
+## 
+##         z = 13.3 
 ##   p-value = 0</code></pre>
 </div>
 
