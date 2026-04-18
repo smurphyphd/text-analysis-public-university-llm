@@ -23,7 +23,7 @@ Contains Assignment 3 write-up as word doc and pdf.
 Contains all excel files used, which represent the corpus at different stages of development. Some are work-in-progress files and others are "semi-final" versions which were then used for fine-tuning.
 - V14, V18, V23 and V24 represent 4 excel versions used in the fine-tuning code shared from Google Colab
 
-Google Colab links are included with the final project write-up (see docs). They are also copied here for convenience. These have been shared to be public, viewable links. Google Colab was used (following an in-class template) to fine-tune the model over 4 phases, involving 4 different versions of the corpus.
+Google Colab links are included within the final project write-up (see docs). They are also copied here for convenience. These have been shared to be public, viewable links. Google Colab was used (following an in-class template) to fine-tune the model over 4 phases, involving 4 different versions of the corpus.
 
 Phase 1 (V14)
 - https://colab.research.google.com/drive/1ne8x5RwFtfyBC0FiBR7FTyK9Cht0pf6b?usp=sharing
@@ -42,5 +42,5 @@ Phase 4 (V24)
 - https://colab.research.google.com/drive/1_lk_cvCMehdLEemOvasTSZy2qSX02Pfg?usp=sharing
 
 # Docs
-Contains the final essay (4,000 words + references + appendices) as a word doc and pdf.
-Contains in-class presentation as a powerpoint and pdf. 
+- Contains the final essay (4,000 words + references + appendices) as a word doc and pdf.
+- Contains in-class presentation as a powerpoint and pdf. 
