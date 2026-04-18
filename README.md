@@ -15,17 +15,23 @@ Part 1 of this Assignment involved building a small corpus of 200 observations t
 Part 2 of this Assignment involved building up observations to 200 per class and then making predictions on a sample outside of the corpus. Relies upon Google Colab code provided in class.
 
 # Data
-Data folder within the Assignment 3 folder contains:
-- trainingmodel_ontario_budgets_v4_llm_sample.xlsx - this is the data I hand coded and used in Google CoLab
-- llm_all_predictions.xlsx - this is the exported predictions from the 3 LLM models. Contains comparison/variance columns to highlight differences between human and LLM coding
-- R Markdown file and knitted R html file used to calculate intercoder reliability
+Data folder within the Assignment 3 folder contains the following relevant files:
+- trainingmodel_ontario_budgets_v4_llm_sample.xlsx - this is the data I hand coded and used in Google CoLab for Part 1
+- trainingmodel_ontario_budgets_v5_llm_sample.xlsx - this is the data I hand coded and used in Google Colab for Part 2
+- trainingmodel_ontario_budgets_v14_llm_sample.xlsx - this is the corpus I further refined that I practiced fine-tuning with. This version carried over into my Final Assignment project
+- llm_all_predictions.xlsx - this is the exported predictions from the 3 LLM models from Part 1. Used to calculate intercoder reliability.
+- llm_all_predictions-5.xlsx - this a second LLM annotation attempt that was used to compare intercoder reliability.
+- R Markdown file and knitted R html file used to calculate intercoder reliability. Contains results from the V4 and V5 annotation output files.
+- carleton_sample_predict.xlsx - sample file used to test predictive power of model in Part 2.
 
 Google Colab links are found within the assignment write-up (see Docs). Also included here for convenience as public, shareable links.
 
-Part 1:
+Part 1: LLM Annotating (V4 file)
 - https://colab.research.google.com/drive/1EZQ2k3D6pcOc5l1rMuQgaX5Sxy0Eap6B?usp=sharing
 
-Part 2:
+Part 2: Fine-Tuned Model (V14 file)
+- https://colab.research.google.com/drive/1WtSSnQ2e-JwbKbzeNqLQUipELRhO1flC?usp=sharing 
+
 
 # Docs
 Contains Assignment 3 write-up as word doc and pdf.
