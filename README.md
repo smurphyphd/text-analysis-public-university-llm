@@ -22,6 +22,11 @@ Data folder within the Assignment 3 folder contains:
 
 Google Colab links are found within the assignment write-up (see Docs). Also included here for convenience as public, shareable links.
 
+Part 1:
+- https://colab.research.google.com/drive/1EZQ2k3D6pcOc5l1rMuQgaX5Sxy0Eap6B?usp=sharing
+
+Part 2:
+
 # Docs
 Contains Assignment 3 write-up as word doc and pdf.
 
