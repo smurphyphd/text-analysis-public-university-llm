@@ -4,9 +4,15 @@ This ReadME file contains my Assignment #3 data.
 
 This GitHub contains all of the data files and documents write-ups for Sara's LLM project for Computational Text Analysis.
 
-This repository includes both the answers to Assignment #3, which relied on an early stage version of the data, and the Final Project.
+This repository includes both the answers to Assignment #3, which relied at times upon an earlier stage version of the data, and the Final Project.
+
+Both projects relate to the context of Canadian public universities, trying to assess how they perceive their "resource dependence" upon the government who provides the majority of their funding. Specifically, in the province of Ontario, public universities have experienced a policy shock since 2019 that some universities have attributed to poor financial performance. This project aims to explore how dependence operates as a subjective construct that in turn shapes strategic action.
+
 
 # ASSIGNMENT 3
+Part 1 of this Assignment involved building a small corpus of 200 observations total to practice hand coding and using an LLM as an annotator. Relies upon Google Colab code provided in class.
+
+Part 2 of this Assignment involved building up observations to 200 per class and then making predictions on a sample outside of the corpus. Relies upon Google Colab code provided in class.
 
 # Data
 Data folder within the Assignment 3 folder contains:
@@ -14,10 +20,14 @@ Data folder within the Assignment 3 folder contains:
 - llm_all_predictions.xlsx - this is the exported predictions from the 3 LLM models. Contains comparison/variance columns to highlight differences between human and LLM coding
 - R Markdown file and knitted R html file used to calculate intercoder reliability
 
+Google Colab links are found within the assignment write-up (see Docs). Also included here for convenience as public, shareable links.
+
 # Docs
 Contains Assignment 3 write-up as word doc and pdf.
 
+
 # FINAL PROJECT
+This project designs two fine-tuned binary classifier models to detect the presence of perceptions of resource dependence langauge (0,1) as well as the intensity of these perceptions (low, high). 
 
 # Data
 Contains all excel files used, which represent the corpus at different stages of development. Some are work-in-progress files and others are "semi-final" versions which were then used for fine-tuning.
