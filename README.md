@@ -1,6 +1,6 @@
 This ReadME file contains my Assignment #3 data.
 
-# Text Analysis Project - Fine-Tuned Classifer Model via LLM Encoder - Sara Murphy
+# Text Analysis Project - Fine-Tuned Classifier Models via LLM Encoder - Sara Murphy
 
 This GitHub contains all of the data files and documents write-ups for Sara's LLM project for Computational Text Analysis.
 
