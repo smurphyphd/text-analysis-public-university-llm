@@ -6,7 +6,7 @@ This GitHub contains all of the data files and documents write-ups for Sara's LL
 
 This repository includes both the answers to Assignment #3, which relied at times upon an earlier stage version of the data, and the Final Project.
 
-Both projects relate to the context of Canadian public universities, trying to assess how they perceive their "resource dependence" upon the government who provides the majority of their funding. Specifically, in the province of Ontario, public universities have experienced a policy shock since 2019 that some universities have attributed to poor financial performance. This project aims to explore how dependence operates as a subjective construct that in turn shapes strategic action.
+Both projects relate to the context of Canadian public universities, trying to assess how they perceive their "resource dependence" upon the government who provides the majority of their funding. Specifically, in the province of Ontario, public universities have experienced a policy shock since 2019 that some universities have attributed to poor financial performance. This project aims to explore how dependence operates as a subjective construct rooted in leader perceptions, which in turn shapes the strategic action and financial performance of public universities.
 
 
 # ASSIGNMENT 3
